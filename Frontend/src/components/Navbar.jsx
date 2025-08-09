@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Navabr = () => {
+export const Navbar = () => {
   return (
-    <nav className="flex items-center rounded-3xl justify-between px-6 py-3 shadow-md bg-white">
+    <nav className="flex  rounded-3xl justify-between  shadow-amber-100 bg-white">
       {/* Left: Logo + Title */}
-      <div className="flex items-center  ">
+      <div className="flex ">
         <img src="./public/img/Top.png"  alt="Logo" className="w-full h-20 object-contain" />
         
       </div>

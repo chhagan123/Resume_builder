@@ -3,15 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import React from 'react'
-import { Navabr } from './components/Navabr'
+import { Navbar } from './components/Navbar'
+import { Home } from './components/Home'
+import { BrowserRouter as Router, Routes, Route,Link } from "react-router-dom";
+import { Template } from './components/Template'
 
 function App() {
 
 
   return (
     <>
-    <Navabr/>
-    
+    <Router>
+      {/* Navabr stays at the top*/}
+      <Navbar/>
+      {/*Routes*/}
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path="/template" element={<Template/>}/>
+      </Routes>
+    </Router>
     </>
   )
 }

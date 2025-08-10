@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
-import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-// Set PDF.js worker source
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
+// Import centralized PDF.js configuration
+import '../utils/pdfConfig';
 
 
 function EditResume() {

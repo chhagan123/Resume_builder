@@ -4,4 +4,10 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  server: {
+    cors: true,
+  },
+  preview: {
+    cors: true,
+  }
 })

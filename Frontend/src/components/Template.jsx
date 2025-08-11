@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+// import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+// import "react-pdf/dist/esm/Page/TextLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc =
-  "https://unpkg.com/pdfjs-dist@5.3.31/build/pdf.worker.min.mjs";
+// ✅ Match worker version to installed pdfjs-dist automatically
+pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+
 
 export const Template = () => {
   const resumes = [
-    {
-      id: 1,
-      title: "Standard",
-      path: "/shubham_resume.pdf",
-    },
-    {
-      id: 2,
-      title: "Classic",
-      path: "/chhagan_resume.pdf",
-    },
+    { id: 1, title: "Standard", path: "/shubham_resume.pdf" },
+    { id: 2, title: "Classic", path: "/chhagan_resume.pdf" },
   ];
 
   const [selectedTemplate, setSelectedTemplate] = useState(null);
@@ -47,8 +42,7 @@ export const Template = () => {
                   pageNumber={1}
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
-                  width={550} // Small size so 2 fit on screen
-                  className="[&_.react-pdf__Page__textContent]:hidden [&_.react-pdf__Page__annotations]:hidden"
+                  width={550}
                 />
               </Document>
 
@@ -78,7 +72,6 @@ export const Template = () => {
                 pageNumber={1}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
-                className="[&_.react-pdf__Page__textContent]:hidden [&_.react-pdf__Page__annotations]:hidden"
               />
             </Document>
           </div>
@@ -87,3 +80,4 @@ export const Template = () => {
     </div>
   );
 };
+

@@ -27,7 +27,7 @@ export const Home = () => {
         {/* Right Side - Image */}
         <div className="flex-1 mt-10 md:mt-0 flex justify-center">
           <img
-            src="./public/img/Resume_template.webp"
+            src="./img/Resume_template.webp"
             alt="Resume Preview"
             className="max-w-sm md:max-w-md shadow-lg rounded-lg"
           />
